@@ -3,7 +3,6 @@ package sg.edu.np.mad.madpractical5;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.view.textservice.TextInfo;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -13,9 +12,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
-
-import java.util.ArrayList;
-import java.util.Random;
 
 public class MainActivity extends AppCompatActivity {
     @Override
@@ -29,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
 
-        DBHandler dbHandler = new DBHandler(this, null, null, 1);
+        DatabaseHandler dbHandler = new DatabaseHandler(this, null, null, 1);
 
         // Get Components from Layout
         TextView tvName = findViewById(R.id.tvName);

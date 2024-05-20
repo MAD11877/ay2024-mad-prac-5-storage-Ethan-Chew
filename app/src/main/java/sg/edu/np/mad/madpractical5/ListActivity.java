@@ -1,15 +1,9 @@
 package sg.edu.np.mad.madpractical5;
 
-import android.content.DialogInterface;
-import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
-import android.widget.ImageView;
-import android.widget.TextView;
 
 import androidx.activity.EdgeToEdge;
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
@@ -19,7 +13,6 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
-import java.util.Random;
 
 public class ListActivity extends AppCompatActivity {
 
@@ -35,7 +28,7 @@ public class ListActivity extends AppCompatActivity {
         });
 
         // Initialise ArrayList of Users
-        DBHandler dbHandler = new DBHandler(this, null, null, 1);
+        DatabaseHandler dbHandler = new DatabaseHandler(this, null, null, 1);
         dbHandler.initWithUsers();
         ArrayList<User> users = dbHandler.getAllUsers();
 
